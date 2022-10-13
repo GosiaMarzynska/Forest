@@ -1,0 +1,82 @@
+@media (min-width: 768px) {
+	.header {
+		&__text-heading {
+			font-size: 3.8rem;
+		}
+	}
+
+	.about-us {
+		&__text {
+			margin-top: 2em;
+			&-title {
+				font-size: 1.6em;
+			}
+			&-p {
+				font-size: 1.2em;
+			}
+		}
+	}
+
+	.hero-img {
+		&__text {
+			padding: 1.2em 2.4em;
+			font-size: 3.4rem;
+		}
+	}
+
+	.offers {
+		&__cards {
+			display: flex;
+			justify-content: center;
+			flex-wrap: wrap;
+		}
+
+		&__card {
+			margin: 1em;
+			width: 45%;
+		}
+	}
+
+	.footer {
+		&__boxes {
+			display: flex;
+			justify-content: space-between;
+		}
+
+		&__box-desktop {
+			display: block;
+		}
+
+		&__box {
+			margin: 0 2em;
+			width: 25%;
+
+			&:first-child {
+				width: 50%;
+			}
+		}
+
+		&__box-title {
+			font-size: 1.6rem;
+			margin-bottom: 1em;
+		}
+
+		&__box-list {
+			list-style: none;
+		}
+
+		&__box-list-item {
+			margin-bottom: 1em;
+
+			a {
+				transition: color 0.3s;
+				color: $gray2;
+				text-decoration: none;
+			}
+
+			a:hover {
+				color: $dark;
+			}
+		}
+	}
+}

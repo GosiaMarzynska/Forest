@@ -44,7 +44,7 @@ function javaScript(done) {
             presets: ['@babel/env']
         }))
         .pipe(uglify())
-        .pipe(rename({ suffix: ".min.js" }))
+        .pipe(rename({ suffix: ".min" }))
         .pipe(sourcemaps.write())
         .pipe(dest(paths.jsDest));
     done();
