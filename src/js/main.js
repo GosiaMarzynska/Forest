@@ -19,13 +19,19 @@ const handleNav = () => {
 
 const handleObserver = () => {
     const currentSection = window.scrollY;
+    console.log("Scroll Y:" + currentSection);
+    console.log(allSection);
     allSection.forEach(section => {
-        if (section.classList.contains('color-section') && section.offsetTop <= currentSection + 50){
+        if (section.classList.contains('color-section') && section.offsetTop <= currentSection + 50) {
             navBtnBars.classList.add('white-bars-color');
-        } else if (!section.classList.contains('color-section') && section.offsetTop <= currentSection + 50){
+            console.log("dodaje");
+        } else if (!section.classList.contains('color-section') && section.offsetTop <= currentSection + 50) {
             navBtnBars.classList.remove('white-bars-color');
-    }
-})
+            console.log("usuwam " + section.offsetTop);
+        } else {
+            console.log("nic");
+        }
+    })
 }
 
 

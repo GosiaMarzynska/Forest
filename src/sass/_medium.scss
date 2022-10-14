@@ -79,4 +79,64 @@
 			}
 		}
 	}
+
+	.map-section {
+		display: block;
+		.map {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			margin-bottom: 10rem;
+
+			.mapouter {
+				position: relative;
+				text-align: right;
+				height: 500px;
+				width: 600px;
+			}
+
+			.gmap_canvas {
+				overflow: hidden;
+				background: none !important;
+				height: 500px;
+				width: 600px;
+			}
+		}
+	}
+
+	.info {
+		&__list {
+			background-color: $light-gray;
+		}
+	}
+
+	.contact {
+		&__form {
+			gap: 30px;
+		}
+
+		&__form-box {
+			&:nth-child(1) {
+				grid-column: 1/4;
+				grid-row: 1/2;
+			}
+			&:nth-child(2) {
+				grid-column: 4/7;
+				grid-row: 1/2;
+			}
+			&:nth-child(3) {
+				grid-column: 1/-1;
+				grid-row: 2/3;
+			}
+		}
+
+		&__form-btn {
+			grid-row: 3/4;
+			font-size: 1.8rem;
+		}
+
+		label {
+			font-size: 2rem;
+		}
+	}
 }

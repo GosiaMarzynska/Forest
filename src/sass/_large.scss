@@ -1,8 +1,12 @@
 @media (min-width: 992px) {
 	.nav-container {
-		position: relative;
+		position: sticky;
+		top: 0;
+		left: 0;
 		display: flex;
 		justify-content: space-around;
+		background-color: $pure-white;
+		z-index: 50;
 
 		.nav-logo {
 			margin: 15px;
@@ -64,6 +68,7 @@
 
 	.about-us {
 		position: relative;
+		padding-top: 0.1em;
 		.wrapper {
 			display: flex;
 			margin-bottom: 8em;
@@ -94,6 +99,7 @@
 	}
 
 	.offers {
+		padding-top: 0.1em;
 		&-text {
 			font-size: 3rem;
 		}

@@ -21,7 +21,6 @@ body {
 	background-color: $pure-white;
 }
 
-
 // NAV
 .nav-container {
 	.nav-logo {
@@ -222,7 +221,7 @@ body {
 		text-align: center;
 	}
 
-	&__cards{
+	&__cards {
 		padding: 1em;
 	}
 	&__card {
@@ -351,6 +350,108 @@ body {
 	}
 }
 
-@import "./small";
+.info {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	&__list {
+		display: flex;
+		flex-direction: column;
+		padding: 2em;
+		line-height: 180%;
+
+		list-style: none;
+		font-size: 2.5rem;
+
+		&-item {
+			&-link {
+				color: $gray2;
+				transition: text-decoration 0.3s;
+				text-decoration: none $light-gray;
+			}
+
+			&-link:hover {
+				color: $dark;
+				text-decoration: underline $green-color;
+			}
+		}
+	}
+}
+
+.map-section {
+	display: none;
+}
+
+//CONTACT
+.contact {
+	padding: 2em;
+	padding-bottom: 6em;
+	background-color: $light-gray;
+
+	&__form {
+		display: grid;
+		grid-template-columns: repeat(6, 1fr);
+	}
+
+	&__form-box {
+		label {
+			display: block;
+			margin-bottom: 0.5em;
+			font-size: 2rem;
+		}
+
+		textarea {
+			max-width: 100%;
+			width: 100%;
+			min-width: 100%;
+		}
+
+		input,
+		textarea {
+			padding: 1em 2em;
+			margin-bottom: 2em;
+			width: 100%;
+			color: $dark;
+
+			border: 1px solid rgba(255, 255, 255, 0.1);
+
+			&:focus {
+				outline: none;
+				border: 1px solid $green-color;
+			}
+		}
+		&:nth-child(1) {
+			grid-column: 1/-1;
+			grid-row: 1/2;
+		}
+		&:nth-child(2) {
+			grid-column: 1/-1;
+			grid-row: 2/3;
+		}
+		&:nth-child(3) {
+			grid-column: 1/-1;
+			grid-row: 3/4;
+		}
+	}
+
+	&__form-btn {
+		grid-column: 1/3;
+		grid-row: 4/5;
+		padding: 1em;
+		outline: none;
+		border: none;
+		background-color: $green-color;
+		color: $dark;
+		font-weight: bold;
+		cursor: pointer;
+		transition: background-color 0.3s;
+
+		&:hover,
+		&:focus {
+			background-color: $green-color-hover;
+		}
+	}
+}
+
 @import "./medium";
 @import "./large";
