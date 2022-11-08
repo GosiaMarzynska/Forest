@@ -24,12 +24,7 @@ body {
 // NAV
 .nav-container {
 	.nav-logo {
-		margin: 20px;
-		margin-left: 10%;
-		font-size: 3.6rem;
-		.fa-tree {
-			color: $gray2;
-		}
+		display: none;	
 	}
 
 	.burger-btn {
@@ -160,10 +155,22 @@ body {
 	text-align: left;
 	color: $pure-white;
 	font-weight: 300;
-	@include heroImages("/dist/img/jungle-small.jpg");
-	background-attachment: scroll;
+
+	background-color: rgba(0, 178, 147, 1);
+
+	&__img {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+		height: 100%;
+		display: flex;
+		opacity: 0.2;
+		overflow: hidden;
+
+	}
 
 	&__text {
+		//text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.6);
 		&-label {
 			font-size: 1.4em;
 			margin-bottom: 5px;
@@ -197,7 +204,7 @@ body {
 
 .hero-img {
 	position: relative;
-	@include heroImages("/dist/img/girl-in-forest_small.jpg");
+	@include heroImages("/dist/img/stethoscope-small.jpg");
 	overflow: hidden;
 	margin-bottom: 3em;
 
@@ -449,6 +456,56 @@ body {
 		&:hover,
 		&:focus {
 			background-color: $green-color-hover;
+		}
+	}
+}
+
+.adventure {
+	&__cards {
+		position: relative;
+	}
+
+	.second-card {
+		background-color: $light-gray;
+	}
+
+	&__card {
+		display: table;
+		margin: 0 auto 4em auto;
+		font-size: 0;
+		margin-bottom: 3rem;
+		padding: 3rem 0;
+
+		&-title {
+			padding-bottom: 4rem;
+			font-size: 2.4rem;
+			text-align: center;
+		}
+
+		&-img {
+			text-align: center;
+			width: 100%;
+			height: 100%;
+			overflow: hidden;
+
+			&-item {
+				min-width: 240px;
+				max-width: 100%;
+				max-width: 100%;
+				transition: transform 0.4s;
+
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+		}
+
+		&-text {
+			padding: 1.5rem;
+			font-size: 1.6rem;
+			padding-top: 3rem;
+			text-align: left;
+			line-height: 150%;
 		}
 	}
 }
